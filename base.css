@@ -1,0 +1,29 @@
+
+body {
+    background: #349A67;
+    color: #C1E5D3;
+    text-align: center;
+    margin: 10%;
+}
+
+a {
+    color: #336666;
+}
+
+a:visited {
+    color: #FFFFFF;
+}
+
+.name {
+    color: #FFFFFF;
+    font-variant: small-caps;
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+}
+
+.navback {
+    margin-bottom: 100px;
+}
