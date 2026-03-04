@@ -27,3 +27,80 @@ ul {
 .navback {
     margin-bottom: 100px;
 }
+
+/* Navigation bar styles(the buttons at the very top) */
+
+#navbartop {
+    display: flex; /* Essential to add centering */
+    justify-content: center; /* Centers content horizontally */
+}
+
+#navbartop ul{
+    border-radius: 10px; /* Makes the corners rounded */
+    list-style-type: none; /* Removes bullet points */
+    background-color: rgb(79, 211, 101); /* Sets navbar background color to this shade of green */
+    
+    padding: 0px; /* If removed, the text position will be affected. The text goes a little to the left and creates a part where the bg color doesn't change color when hovering the Home button */
+    margin: 0px; /* Makes the navbar go a little higher */
+    overflow: hidden; /* Essential to make the navbar not go outside of its container when hovered */
+}
+
+#navbartop a{
+    font-size: 16px; /* Makes the text size bigger */
+    font-weight: bolder; /* Makes the text bolder(more than bold) */
+    width: 100px; /* Changes the width of the navbar */
+    color: white; /* Makes the text color white */
+    text-decoration: none;  /* Removes underline and the "purpleness" from the text */
+    padding: 15px; /* Adds space around the text */
+    display: block; /* Makes the navbar not squished vertically */
+    text-align: center; /* Centers the text inside the button */
+}
+
+#navbartop a:hover{
+    background-color: rgb(45, 121, 58); /* Changes the background color of the navbar to a darker color when hovered(Depending on which item you are hovering) */
+}
+
+#navbartop li{
+    float: left; /* Makes the list items go next to each other rather than on top of each other */
+}
+
+
+
+/* Download Button Styles */
+
+.DownloadButton {
+  display: inline-block; /* Essential to allow width/height */
+  width: 230px; /* Download button width */
+  height: 20px; /* Download button height */
+  text-align: center; /* Centers the text inside the button */
+  padding: 20px; /* Adds space around the text */
+  background-color: rgb(72, 190, 92); /* Download button background color */
+  border-radius: 10px; /* Makes the button round(The higher the value, the rounder it is) */  
+  cursor: pointer; /* Makes the cursor point to the button instead of just the text */
+}
+
+.DownloadButton a{  
+  font-size : 20px; /* Makes the text bigger */
+  font-weight: bold; /* Makes the text bold */
+  text-decoration: none; /* Removes underline and the "purpleness" from the text */
+  color: white; /* sets text color to white*/
+}
+
+.DownloadButton:hover {
+  background-color: rgb(45, 121, 58); /* Changes the background color of the download button to a darker color when hovered */
+}
+
+.DownloadButton:active {
+  background-color: rgb(34, 90, 41); /* Changes the background color of the download button to an even darker color when hovered */
+}
+
+
+/* Clock styles */
+#clock{
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 91px;
+    height: 30px;
+}
