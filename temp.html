@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quartz</title>
+        <link rel="stylesheet" href="base.css">
+    </head>
+    <body>
+        <div id="header">
+            <img src="Main%20Logo%20(white).svg" alt="quartz logo" id="logo">
+            <nav class="navbar" id="navbartop">
+                <ul>
+                  <li id="HomePage"><a href="index.html">Home</a></li>
+                  <li id="DownloadsPage"><a href="downloads.html">Downloads</a></li>
+                  <li id="AboutUsPage"><a href="aboutus.html">About us</a></li>
+                  <li id="FAQPage"><a href="">FAQ</a></li>
+                  <li id="GitHubPage"><a href="https://github.com/skythedragon-n/quartz">GitHub page</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="content">
+            <!-- Placeholder for main content; add dynamic sections here as needed -->
+            <h1>temp</h1>
+        </div>
+
+        <script>
+            // Scroll animation for header
+            window.onscroll = function() {
+                var header = document.getElementById("header");
+                if (window.scrollY > 100) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            };
+
+            // Intersection Observer for fade-in animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(el => observer.observe(el));
+        </script>
+    </body>
+</html>
