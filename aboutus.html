@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Quartz</title>
+        <link rel="stylesheet" href="base.css">
+    </head>
+    <body>
+        <div id="header">
+            <img src="Main%20Logo%20(white).svg" alt="quartz logo" id="logo">
+            <nav class="navbar" id="navbartop">
+                <ul>
+                  <li id="HomePage"><a href="home.html">Home</a></li>
+                  <li id="DownloadsPage"><a href="downloads.html">Downloads</a></li>
+                  <li id="AboutUsPage"><a href="aboutus.html">About us</a></li>
+                  <li id="FAQPage"><a href="">FAQ</a></li>
+                  <li id="GitHubPage"><a href="https://github.com/skythedragon-n/quartz">GitHub page</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <div class="content">
+            <!-- Placeholder for main content; add dynamic sections here as needed -->
+            <h1>Why are we doing this?</h1>
+            <br>
+            <p>Why ARE we doing this? We are just a small team of no pay coders and we aren't getting anywhere anyways.. so why?</p>
+            <p>Well it's because we are coders AND animators who just want a reliable software that won't cost the GDP of a small country to use!</p>
+            <p>This is a passion project and all of us had a lot of fun making this software and we hope that we can continue to improve Quartz and protect our free, open-source, animation software!</p>
+            <p>Created by animators for animators!!! (I know it's cliche but still!)</p>
+            <br><br>
+            <p>(also this is made by the OSC so watch Battle for Dream Island please.)</p>
+            <p style="font-size: 10px;">And im ForeverSky_:D, i made this site so pls watch my vids at <a href="https://www.youtube.com/@iwuvplushies">https://www.youtube.com/@iwuvplushies</a>, k lov u bai</p>
+        </div>
+
+        <script>
+            // Scroll animation for header
+            window.onscroll = function() {
+                var header = document.getElementById("header");
+                if (window.scrollY > 100) {
+                    header.classList.add("scrolled");
+                } else {
+                    header.classList.remove("scrolled");
+                }
+            };
+
+            // Intersection Observer for fade-in animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(el => observer.observe(el));
+        </script>
+    </body>
+</html>

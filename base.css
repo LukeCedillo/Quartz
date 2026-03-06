@@ -1,4 +1,220 @@
+@font-face {
+    font-family: 'Futura LT Pro';
+    src: url('FuturaLTPro-Medium.woff2') format('woff2'),
+        url('FuturaLTPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}@font-face {
+    font-family: 'Futura LT Pro';
+    src: url('FuturaLTPro-Medium.woff2') format('woff2'),
+        url('FuturaLTPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
 
+body {
+    background: #fff;
+    color: #C1E5D3;
+    text-align: center;
+    margin: 0;
+    padding-top: 300px; /* Initial padding to account for fixed header; adjust based on logo size */
+    font-family: "Futura LT Pro", sans-serif;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+a {
+    color: #336666;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #666699;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.name {
+    color: #FFFFFF;
+    font-variant: small-caps;
+}
+
+ul {
+    text-align: left;
+    display: inline-block;
+}
+
+.navback {
+    margin-bottom: 100px;
+}
+
+/* Header styles for logo and navbar container */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #349A67; /* Matches body background */
+    text-align: center;
+    transition: padding 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    padding: 20px 0;
+}
+
+#logo {
+    width: 50%;
+    max-width: 600px; /* Prevents overly large logos on wide screens */
+    transition: width 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+#header.scrolled {
+    padding: 10px 0; /* Shrink padding on scroll for compact look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+#header.scrolled #logo {
+    width: 20%; /* Shrink logo on scroll */
+    transform: scale(0.8); /* Slight scale down for effect */
+}
+
+/* Navigation bar styles */
+#navbartop {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    transition: transform 0.3s ease;
+}
+
+#header.scrolled #navbartop {
+    transform: translateY(-5px); /* Slight upward shift on scroll */
+}
+
+#navbartop ul {
+    border-radius: 10px;
+    list-style-type: none;
+    background-color: rgb(79, 211, 101);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex; /* Flex for better responsiveness */
+    justify-content: center;
+}
+
+#navbartop a {
+    font-size: 16px;
+    font-weight: bolder;
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px; /* Adjust padding for better touch targets */
+    display: block;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#navbartop a:hover {
+    background-color: rgb(45, 121, 58);
+    color: #fff; /* Ensure text remains visible */
+}
+
+/* Content container */
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: opacity 0.5s ease; /* Smooth fade for content */
+}
+
+/* Fade-in animation */
+.fade-in {
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Download Button Styles */
+.DownloadButton {
+    display: inline-block;
+    width: 230px;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(72, 190, 92);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 50px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.DownloadButton:hover {
+    background-color: rgb(45, 121, 58);
+    transform: scale(1.05); /* Slight scale up on hover */
+}
+
+.DownloadButton:active {
+    background-color: rgb(34, 90, 41);
+    transform: scale(0.95); /* Scale down on click */
+}
+
+.DownloadButton a {
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+button {
+    font-family: "Futura LT Pro", sans-serif;
+    color: #349A67;
+    background-color: #fff;
+    border-radius: 10px;
+    border-color: #fff;
+    border-width: 5px;
+    font-size: xx-large;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    #logo {
+        width: 80%; /* Larger logo on small screens */
+    }
+
+    #header.scrolled #logo {
+        width: 40%;
+    }
+
+    #navbartop ul {
+        flex-direction: column; /* Stack nav items on small screens */
+    }
+
+    #navbartop a {
+        padding: 10px;
+        width: 100%;
+    }
+
+    body {
+        padding-top: 200px; /* Adjust top padding for smaller header */
+    }
+}
+
+/* Clock styles (retained but unused; can be applied dynamically if needed) */
+#clock {
+    overflow: hidden;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    width: 91px;
+    height: 30px;
+}
 body {
     background: #349A67;
     color: #C1E5D3;
